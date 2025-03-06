@@ -1,0 +1,204 @@
+:root {
+    --card-color: #121212;
+    --card-color-2: #2a2a2a;
+    --bg-color: #000000;
+    --header-text-color: #b3b3b3;
+    --text-color: #ffffff;
+    --button-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    height: 100vh;
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+/* Icons */
+
+.icon {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.black-icon {
+    filter: brightness(0) invert(1);
+    width: 25px;
+    height: 25px;
+}
+
+#homeIcon {
+    width: 25px;
+    height: 25px;
+}
+
+#spotifyLogo {
+    margin-left: 30px;
+}
+
+#lupaIcon {
+    margin-left: 10px;
+}
+
+#explorarIcon {
+    margin-right: 15px;
+    margin-left: 5px;
+    opacity: 0.8;
+}
+
+#downloadIcon {
+    height: 15px;
+    width: 15px;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 65px;
+    background-color: var(--bg-color);
+    position: fixed;
+    width: 100vw;
+}
+
+#homeButton {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-color-2);
+    transition: transform 0.2s ease;
+    margin-left: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+#homeButton:hover {
+    background-color: #303030;
+    transform: scale(1.05);
+}
+
+#homeButton:active {
+    opacity: 0.8;
+}
+
+.contenedor-searchBar {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: 25px;
+    width: 450px;
+    height: 48px;
+    background-color: var(--card-color-2);
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.contenedor-searchBar>input {
+    width: 350px;
+    height: 30px;
+    background-color: var(--card-color-2);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-right: 1px solid gray;
+    caret-color: white;
+}
+
+.contenedor-searchBar>input::placeholder {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.contenedor-searchBar>input:focus {
+    outline: none;
+}
+
+.contenedor-searchBar:focus-within {
+    border: 2px solid white;
+}
+
+#contenedor-navBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 400px;
+    padding-right: 30px;
+    border-right: 1px solid white;
+    height: 25px;
+}
+
+#contenedor-navBar>nav>ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--header-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform 0s linear;
+}
+
+.link:hover {
+    transform: scale(1.02);
+    color: var(--text-color);
+}
+
+#contenedor-derecha {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#contenedor-descargar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#contenedor-signin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#contenedor-signin>button {
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 25px;
+    width: 150px;
+    height: 48px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform 0s linear;
+}
+
+#contenedor-signin>button:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
