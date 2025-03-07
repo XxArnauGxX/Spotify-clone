@@ -261,6 +261,11 @@ main {
     max-height: 9rem;
     position: relative;
     top: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover > img {
+    transform: scale(1.07);
 }
 
 .artist-info {
