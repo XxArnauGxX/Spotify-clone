@@ -5,6 +5,11 @@
     --header-text-color: #b3b3b3;
     --text-color: #ffffff;
     --button-color: #ffffff;
+    --icon-size: 2rem;
+    --header-height: 10vh;
+    --footer-height: 10vh;
+    --content-spacing: 0.5rem;
+    --footer-spacing: 1rem;
 }
 
 * {
@@ -19,67 +24,50 @@ body {
     height: 100vh;
     overflow-x: hidden;
     color: var(--text-color);
+    display: flex;
 }
 
-/* Icons */
-
 .icon {
-    max-width: 30px;
-    max-height: 30px;
+    max-width: var(--icon-size);
+    max-height: var(--icon-size);
 }
 
 .black-icon {
     filter: brightness(0) invert(1);
-    width: 25px;
-    height: 25px;
-}
-
-#homeIcon {
-    width: 25px;
-    height: 25px;
-}
-
-#spotifyLogo {
-    margin-left: 30px;
+    width: calc(var(--icon-size) * 0.8);
+    height: calc(var(--icon-size) * 0.8);
 }
 
 #lupaIcon {
-    margin-left: 10px;
+    margin-left: 0.8rem;
 }
 
 #explorarIcon {
-    margin-right: 15px;
-    margin-left: 5px;
-    opacity: 0.8;
+    margin-right: 0.8rem;
 }
-
-#downloadIcon {
-    height: 15px;
-    width: 15px;
-}
-
-/* Header */
 
 header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 65px;
+    height: var(--header-height);
     background-color: var(--bg-color);
+    width: 100%;
+    padding: 0 2%;
     position: fixed;
-    width: 100vw;
+    margin-bottom: 1rem;
 }
 
 #homeButton {
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--card-color-2);
     transition: transform 0.2s ease;
-    margin-left: 30px;
+    margin-left: 2%;
     border: none;
     cursor: pointer;
 }
@@ -94,24 +82,25 @@ header {
 }
 
 .contenedor-searchBar {
-    margin-left: 10px;
+    margin-left: 0.5%;
+    margin-right: 7%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 5px;
     border-radius: 25px;
-    width: 450px;
-    height: 48px;
+    flex: 1;
+    height: 3rem;
     background-color: var(--card-color-2);
     border: 2px solid transparent;
     transition: border 0.3s ease;
 }
 
 .contenedor-searchBar>input {
-    width: 350px;
-    height: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex: 1;
+    height: 2rem;
     background-color: var(--card-color-2);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     border: none;
     border-right: 1px solid gray;
@@ -122,7 +111,7 @@ header {
     color: var(--text-color);
     opacity: 0.8;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .contenedor-searchBar>input:focus {
@@ -137,16 +126,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 400px;
-    padding-right: 30px;
+    margin-left: auto;
+    padding-right: 2%;
     border-right: 1px solid white;
-    height: 25px;
+    height: 2rem;
 }
 
 #contenedor-navBar>nav>ul {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 1rem;
     list-style: none;
 }
 
@@ -155,7 +144,7 @@ header {
     text-decoration: none;
     color: var(--header-text-color);
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875rem;
     transition: transform 0s linear;
 }
 
@@ -165,36 +154,36 @@ header {
 }
 
 #contenedor-derecha {
-    margin-left: 50px;
+    margin-left: 2%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 2rem;
 }
 
 #contenedor-descargar {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 0.5rem;
 }
 
 #contenedor-signin {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 1rem;
 }
 
 #contenedor-signin>button {
     background-color: var(--button-color);
     border: none;
     border-radius: 25px;
-    width: 150px;
-    height: 48px;
+    width: 10rem;
+    height: 3rem;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 0.875rem;
     transition: transform 0s linear;
 }
 
@@ -203,43 +192,139 @@ header {
     cursor: pointer;
 }
 
-/* Aside content */
+#contenedor-signin>button:active {
+    opacity: 0.8;
+    transform: scale(1);
+}
 
 #aside-content {
     background-color: var(--card-color);
-    width: 430px;
-    position: fixed;
-    top: 65px;
-    left: 0;
-    bottom: 73px;
+    width: calc(30% - 1rem);
+    height: calc(100vh - var(--header-height) - var(--footer-height) - var(--content-spacing) - var(--footer-spacing));
     overflow-y: auto;
     border-radius: 10px;
-    padding: 15px;
+    padding: 1rem;
+    position: fixed;
+    top: calc(var(--header-height) + var(--content-spacing));
+    left: var(--content-spacing);
 }
-
-/* Main */
 
 main {
     background: linear-gradient(to bottom, var(--card-color-2), var(--card-color));
-    width: 77.2%;
-    position: fixed;
-    top: 65px;
-    right: 0;
-    bottom: 73px;
+    width: calc(70% - 1rem);
+    height: calc(100vh - var(--header-height) - var(--footer-height) - var(--content-spacing) - var(--footer-spacing));
     overflow-y: auto;
     border-radius: 10px;
-    padding: 15px;
+    padding: 1rem;
+    margin-left: calc(25% + 1rem);
+    position: fixed;
+    top: calc(var(--header-height) + var(--content-spacing));
+    right: var(--content-spacing);
+    overflow-x: none;
 }
 
-/* Footer */
+#artistas-populares {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.5rem;
+}
+
+#artistas-populares h1 {
+    margin-bottom: 1rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    flex: 0 0 11rem;
+    height: 14rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.1), var(--card-color-2));
+}
+
+.card > img {
+    border-radius: 50%;
+    max-width: 9rem;
+    max-height: 9rem;
+    position: relative;
+    top: 1rem;
+}
+
+.artist-info {
+    display: flex;
+    justify-items: start;
+    flex-direction: column;
+    align-self: first baseline;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+}
+
+.artist-info p:last-child {
+    color: gray;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+/* Footer*/
 
 footer {
-    height: 65px;
+    height: var(--footer-height);
     background: linear-gradient(to right, #af2997, #519bf5);
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    width: calc(100% - (var(--content-spacing) * 2));
     position: fixed;
-    width: 100vw;
-    bottom: 0;
+    bottom: var(--content-spacing);
+    padding: 0 2%;
+    left: var(--content-spacing);
+}
+
+footer>button {
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 25px;
+    width: 10rem;
+    height: 3rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transition: transform 0s linear;
+}
+
+footer>button:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+footer>button:active {
+    opacity: 0.8;
+    transform: scale(1);
+}
+
+#footer-text {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+#footer-text>h6 {
+    font-weight: 800;
+    font-size: 0.8rem;
 }
