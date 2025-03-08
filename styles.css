@@ -348,3 +348,44 @@ footer>button:active {
     font-weight: 800;
     font-size: 0.8rem;
 }
+
+@media (max-width: 1024px) {
+    #footer-text {
+        gap: 0.2rem;
+    }
+
+    #footer-text>h6 {
+        font-size: 0.7rem;
+    }
+
+    footer>button {
+        width: 8rem;
+        height: 2.5rem;
+        font-size: 0.7rem;
+    }
+
+    #footer-text p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #footer-text {
+        gap: 0.3rem;
+    }
+
+    #footer-text>h6 {
+        font-size: 0.6rem;
+    }
+
+    footer>button {
+        width: 6rem;
+        height: 1.5rem;
+        font-size: 0.5rem;
+    }
+
+    #footer-text p {
+        font-size: 0.6rem;
+        text-align: start;
+    }
+}
