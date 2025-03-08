@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">  
+        rel="stylesheet">
 </head>
 
 <body>
@@ -46,11 +46,132 @@
 
 
     </header>
-    <aside class="contenedor" id="aside-content"></aside>
-    <main class="contenedor">
-        <section id="artistas-populares">
-            <h1 class="main-title">Artistas populares</h1>
-            <div class="cards-container">
+    <section id="main-section">
+        <aside class="contenedor" id="aside-content">
+            <div id="aside-header">
+                <img class="icon black-icon" src="./images/mibibliotecaIcon.png" alt="Icono de mi biblioteca">
+                <h1>Tu biblioteca</h1>
+                <button>+</button>
+            </div>
+            <div id="aside-main">
+                <div>
+                    <h1>Crea tu primera lista</h1>
+                    <p>Es muy fácil, y te echaremos una mano.</p>
+                    <button>Crear lista</button>
+                </div>
+                <div>
+                    <h1>Encuentra pódcasts que quieras seguir</h1>
+                    <p>Te avisaremos cuando salgan nuevos episodios</p>
+                    <button>Explorar pódcasts</button>
+                </div>
+            </div>
+            <div id="aside-footer">
+                <ul>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+                <button><img class="icon black-icon" src="./images/webIcon.png" alt="Icono web">Español de
+                    España</button>
+            </div>
+        </aside>
+
+        <main class="contenedor">
+            <section id="artistas-populares">
+                <h1 class="main-title">Artistas populares</h1>
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="./images/artistas/badbunny.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>Bad Bunny</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/artistas/myketowers.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>Myke Towers</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/artistas/rauwalejandro.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>Rauw Alejandro</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/artistas/karolg.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>KAROL G</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/artistas/quevedo.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>Quevedo</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/artistas/alleh.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>Alleh</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="albumes">
+                <h1 class="main-title">Álbumes y sencillos populares</h1>
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="./images/artistas/badbunny.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>Bad Bunny</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/artistas/myketowers.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>Myke Towers</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/artistas/rauwalejandro.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>Rauw Alejandro</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/artistas/karolg.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>KAROL G</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/artistas/quevedo.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>Quevedo</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/artistas/alleh.jpg" alt="Imagen del bautista de Bad Bunny">
+                        <div class="artist-info">
+                            <p>Alleh</p>
+                            <p>Artista</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h1 class="main-title">Artistas populares</h1>
                 <div class="card">
                     <img src="./images/artistas/badbunny.jpg" alt="Imagen del bautista de Bad Bunny">
                     <div class="artist-info">
@@ -93,18 +214,100 @@
                         <p>Artista</p>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="albumes">
-            <h1 class="main-title">Álbumes y sencillos populares</h1>
-            <div class="cards-container">
-
-            </div>
-        </section>
-        <section></section>
-        <section></section>
-        <section></section>
-    </main>
+            </section>
+            <section>
+                <h1 class="main-title">Artistas populares</h1>
+                <div class="card">
+                    <img src="./images/artistas/badbunny.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>Bad Bunny</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/artistas/myketowers.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>Myke Towers</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/artistas/rauwalejandro.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>Rauw Alejandro</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/artistas/karolg.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>KAROL G</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/artistas/quevedo.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>Quevedo</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/artistas/alleh.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>Alleh</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h1 class="main-title">Artistas populares</h1>
+                <div class="card">
+                    <img src="./images/artistas/badbunny.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>Bad Bunny</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/artistas/myketowers.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>Myke Towers</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/artistas/rauwalejandro.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>Rauw Alejandro</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/artistas/karolg.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>KAROL G</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/artistas/quevedo.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>Quevedo</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/artistas/alleh.jpg" alt="Imagen del bautista de Bad Bunny">
+                    <div class="artist-info">
+                        <p>Alleh</p>
+                        <p>Artista</p>
+                    </div>
+                </div>
+            </section>
+            <footer></footer>
+        </main>
+    </section>
     <footer>
         <div id="footer-text">
             <h6>Muestra de Spotify</h6>
