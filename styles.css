@@ -27,6 +27,8 @@ body {
     display: flex;
 }
 
+/* Icons */
+
 .icon {
     max-width: var(--icon-size);
     max-height: var(--icon-size);
@@ -45,6 +47,8 @@ body {
 #explorarIcon {
     margin-right: 0.8rem;
 }
+
+/* Header */
 
 header {
     display: flex;
@@ -70,6 +74,7 @@ header {
     margin-left: 2%;
     border: none;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 #homeButton:hover {
@@ -197,6 +202,8 @@ header {
     transform: scale(1);
 }
 
+/* Aside */
+
 #aside-content {
     background-color: var(--card-color);
     width: calc(30% - 1rem);
@@ -208,6 +215,8 @@ header {
     top: calc(var(--header-height) + var(--content-spacing));
     left: var(--content-spacing);
 }
+
+/* Main */
 
 main {
     background: linear-gradient(to bottom, var(--card-color-2), var(--card-color));
@@ -223,27 +232,29 @@ main {
     overflow-x: none;
 }
 
+/* Artistas */
+
 #artistas-populares {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
-    padding: 0.5rem;
 }
 
-#artistas-populares h1 {
+.main-title {
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .cards-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
 }
 
 .card {
-    flex: 0 0 11rem;
-    height: 14rem;
+    flex: 1 1 calc(100% / 6);
+    height: 15rem;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -255,16 +266,16 @@ main {
     background: linear-gradient(to top, rgba(255, 255, 255, 0.1), var(--card-color-2));
 }
 
-.card > img {
+.card>img {
     border-radius: 50%;
-    max-width: 9rem;
-    max-height: 9rem;
+    max-width: 10rem;
+    max-height: 10rem;
     position: relative;
     top: 1rem;
     transition: transform 0.3s ease;
 }
 
-.card:hover > img {
+.card:hover>img {
     transform: scale(1.07);
 }
 
@@ -282,6 +293,10 @@ main {
     font-size: 0.8rem;
     margin-top: 0.2rem;
 }
+
+/* Álbumes */
+
+
 
 /* Footer*/
 
